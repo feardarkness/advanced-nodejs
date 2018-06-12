@@ -11,3 +11,25 @@ set.add({ a: 'a' });
 console.log('+++++++++++++++++++++++++++++++++++++++++++');
 console.log(set); // Set { 'uno', 2, { a: 'a' }, { a: 'a' } }
 console.log('+++++++++++++++++++++++++++++++++++++++++++');
+
+const movilidades = [
+  {
+    tipo: 'automovil',
+    color: 'rojo',
+  },
+  {
+    tipo: 'moto',
+    color: 'verde',
+  },
+  {
+    tipo: 'camion',
+    color: 'rojo',
+  },
+];
+
+// ejemplo con reduce
+const datos = [...movilidades.reduce((colors, { color }) => colors.add(color), new Set())];
+
+console.log('+++++++++++++++++++++++++++++++++++++++++++');
+console.log(datos);
+console.log('+++++++++++++++++++++++++++++++++++++++++++');
